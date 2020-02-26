@@ -1041,6 +1041,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 780711594, guid: 0c54384b4d4b0a84aad6456542ea0536, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7290718077225181103, guid: 0c54384b4d4b0a84aad6456542ea0536,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1100,10 +1104,6 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 812643475}
-    - target: {fileID: 780711594, guid: 0c54384b4d4b0a84aad6456542ea0536, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7290718077225181102, guid: 0c54384b4d4b0a84aad6456542ea0536,
         type: 3}
       propertyPath: m_SortingLayerID

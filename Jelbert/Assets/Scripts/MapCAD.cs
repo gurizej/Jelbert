@@ -57,6 +57,17 @@ public class MapCAD : MonoBehaviour
         GameObject go = Instantiate(mapPrefabs[randomIndex]) as GameObject;
         go.transform.SetParent(map.transform);
         go.transform.position = new Vector2(nextMapPlacement, 0);
-        nextMapPlacement = nextMapPlacement + mapLength;        
+        nextMapPlacement = nextMapPlacement + mapLength;   
+        activeMaps.Add(go); 
+        deleteOldMap();  
+    }
+
+    void deleteOldMap() {
+        Debug.Log(activeMaps.Count);
+        
+        if (activeMaps.Count > 2) {
+            Destroy(activeMaps[0]);
+            activeMaps.RemoveAt(0);
+        }
     }
 }

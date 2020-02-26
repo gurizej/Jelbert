@@ -33,6 +33,10 @@ public class EnemyMovement : MonoBehaviour
         moveInput *= -1.0f;
     }
 
+    public void StopMoving() {
+        moveInput = 0;
+    }
+
     void Flip() {
         facingRight = !facingRight;
         Vector3 Scaler = transform.localScale;

@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class ControlsMenuScript : MonoBehaviour
 {
-    public void PlayGame() {
-        SceneManager.LoadScene("Game");
-    }
-
-    public void ControlsScene() {
-        SceneManager.LoadScene("Controls");
+    public void MenuScreen() {
+        SceneManager.LoadScene("Menu");
     }
 
     public void QuitGame() {

@@ -31,8 +31,19 @@ public class Sword : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "Enemy") {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
             addToScore();
+
+            //Animation resets
+            other.gameObject.GetComponent<EnemyMovement>().StopMoving();
+            //Movement Reset 
+            other.gameObject.GetComponent<Animator>().enabled = false;
+            Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
+            rb.velocity = new Vector2(0, 5);
+            foreach(Collider2D c in other.gameObject.GetComponents<Collider2D>()) {
+                c.enabled = false;
+            }
+            
         }
     }
 
