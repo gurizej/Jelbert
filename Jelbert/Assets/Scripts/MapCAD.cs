@@ -12,15 +12,14 @@ public class MapCAD : MonoBehaviour
     public GameObject player;
 
     public List<GameObject> mapPrefabs;
-    public List<GameObject> activeMaps;
+    //public List<GameObject> activeMaps;
 
     int mapLength = 52;
-    int start = 0;
     int nextMapPlacement = 0;
     
     void Start()
     {
-        activeMaps = new List<GameObject>();
+        //activeMaps = new List<GameObject>();
         mapPrefabs = new List<GameObject>();
         mapPrefabs.Add(grid1);
         mapPrefabs.Add(grid2);
@@ -58,16 +57,17 @@ public class MapCAD : MonoBehaviour
         go.transform.SetParent(map.transform);
         go.transform.position = new Vector2(nextMapPlacement, 0);
         nextMapPlacement = nextMapPlacement + mapLength;   
-        activeMaps.Add(go); 
-        deleteOldMap();  
+        //activeMaps.Add(go); 
+        //deleteOldMap();  
     }
 
-    void deleteOldMap() {
-        Debug.Log(activeMaps.Count);
+    //TODO: GURI memory management that deletes already passed activeMaps
+    // void deleteOldMap() {
+    //     Debug.Log(activeMaps.Count);
         
-        if (activeMaps.Count > 2) {
-            Destroy(activeMaps[0]);
-            activeMaps.RemoveAt(0);
-        }
-    }
+    //     if (activeMaps.Count > 2) {
+    //         Destroy(activeMaps[0]);
+    //         activeMaps.RemoveAt(0);
+    //     }
+    // }
 }
