@@ -8,6 +8,8 @@ public class CameraFollowPlayer : MonoBehaviour
     public GameObject player;
     private float previousSpot;
 
+    public AudioSource gameAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +28,9 @@ public class CameraFollowPlayer : MonoBehaviour
             previousSpot = playerPosX;
         }
         
+    }
+
+    public void stopMusic() {
+        gameAudio.Stop();
     }
 }

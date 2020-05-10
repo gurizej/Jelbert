@@ -6,9 +6,13 @@ public class MapCAD : MonoBehaviour
 {
 
     public GameObject map;
+    public GameObject grid;
     public GameObject grid1;
     public GameObject grid2;
     public GameObject grid3;
+    public GameObject grid4;
+    public GameObject grid5;
+    public GameObject grid6;
     public GameObject player;
 
     public List<GameObject> mapPrefabs;
@@ -21,9 +25,13 @@ public class MapCAD : MonoBehaviour
     {
         //activeMaps = new List<GameObject>();
         mapPrefabs = new List<GameObject>();
+        mapPrefabs.Add(grid);
         mapPrefabs.Add(grid1);
         mapPrefabs.Add(grid2);
         mapPrefabs.Add(grid3);
+        mapPrefabs.Add(grid4);
+        mapPrefabs.Add(grid5);
+        mapPrefabs.Add(grid6);
 
         float playerPosX = player.transform.position.x;
         transform.position = new Vector3(playerPosX-70, 0, -1);

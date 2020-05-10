@@ -9,6 +9,8 @@ public class Sword : MonoBehaviour
     public Animator parentAnimator;
     public float swordScore = 0f;
 
+    public AudioSource swordSlashAudio;
+
     void Start() {
         parent = this.gameObject.transform.parent.gameObject;
     }

@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float speed = 5;
 
+    public AudioSource deathAudio;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd83d654429c9ed47b2e038a55b1e6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathAudio: {fileID: 0}
 --- !u!58 &8127973677484340073
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -304,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd83d654429c9ed47b2e038a55b1e6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathAudio: {fileID: 0}
 --- !u!58 &8127973675854721571
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     private bool isNotDead = true;
     public GameObject mainCam;
 
+    public AudioSource jumpAudio;
+    public AudioSource deathAudio;
+
     void Start() {
         rb= GetComponent<Rigidbody2D>();
         sword = GetSword();
@@ -40,6 +43,8 @@ public class PlayerController : MonoBehaviour
             
             float yDir = rb.velocity.y;
             if (jumpInput > 0 && isGrounded) {
+                //TODO: add jump audio
+                jumpAudio.Play();
                 yDir = speed + 2;
                 isGrounded = false;
             } 
@@ -81,6 +86,9 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Jump", false);
         }else if (other.gameObject.tag == "Enemy" && !sword.activeInHierarchy) {
             isNotDead = false;
+            //Audio play
+            deathAudio.Play();
+            mainCam.GetComponent<CameraFollowPlayer>().stopMusic();
             //Animation resets
             animator.SetFloat("PlayerSpeed", 0);
             animator.SetBool("Jump", false);
@@ -91,6 +99,10 @@ public class PlayerController : MonoBehaviour
             InvokeRepeating("mainMenu", 2f, 0f);
         }else if (other.gameObject.tag == "Pit") {
             isNotDead = false;
+            //Audio play
+            deathAudio.Play();
+            mainCam.GetComponent<CameraFollowPlayer>().stopMusic();
+            //Animations
             animator.SetFloat("PlayerSpeed", 0);
             rb.velocity = new Vector2(0, 0);
             this.gameObject.GetComponent<Collider2D>().enabled = false;
