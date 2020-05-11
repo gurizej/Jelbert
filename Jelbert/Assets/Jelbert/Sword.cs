@@ -36,6 +36,8 @@ public class Sword : MonoBehaviour
             //Destroy(other.gameObject);
             addToScore();
 
+            //Play sound
+            other.gameObject.GetComponent<EnemyMovement>().PlayDeathSound();
             //Animation resets
             other.gameObject.GetComponent<EnemyMovement>().StopMoving();
             //Movement Reset 

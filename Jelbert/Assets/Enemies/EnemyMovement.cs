@@ -45,4 +45,8 @@ public class EnemyMovement : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
+
+    public void PlayDeathSound() {
+        deathAudio.Play();
+    }
 }
